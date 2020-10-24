@@ -19,7 +19,7 @@ var glitch;
 var scream;
 //other
 var currentScaryFact;
-var n = 37;
+var n = 10;
 var m = 0;
 var j = 0;
 var currentPage = 0;
@@ -71,7 +71,7 @@ function draw() {
     pumpkinWidth = pumpkinHeight/pumpkin.height*pumpkin.width;
     image(pumpkins[m], windowWidth/2, windowHeight/5*3, pumpkinWidth, pumpkinHeight);
     m++;
-    if(m>=37){
+    if(m>=n){
       m=0;
     }
     // candy
