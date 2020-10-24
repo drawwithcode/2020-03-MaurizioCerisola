@@ -19,7 +19,7 @@ var glitch;
 var scream;
 //other
 var currentScaryFact;
-var n = 10;
+var n = 37;
 var m = 0;
 var j = 0;
 var currentPage = 0;
