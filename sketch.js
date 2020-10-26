@@ -19,9 +19,10 @@ var glitch;
 var scream;
 //other
 var currentScaryFact;
-var n = 37;
+var n = 10;
 var m = 0;
 var j = 0;
+var increase = true;
 var currentPage = 0;
 var firstTime = false;
 
@@ -70,9 +71,19 @@ function draw() {
     pumpkinHeight = windowHeight/5*4;
     pumpkinWidth = pumpkinHeight/pumpkin.height*pumpkin.width;
     image(pumpkins[m], windowWidth/2, windowHeight/5*3, pumpkinWidth, pumpkinHeight);
-    m++;
+    if (increase) {
+      m++;
+    }
+    else {
+      m--;
+    }
     if(m>=n){
-      m=0;
+      m=n-2;
+      increase = false;
+    }
+    if(m<0){
+      m=1;
+      increase = true;
     }
     // candy
     var candyButton = new button(candy, windowHeight/3*1.1 , windowWidth/8, windowHeight/7*3, 1);
